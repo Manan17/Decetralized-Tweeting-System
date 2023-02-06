@@ -22,19 +22,7 @@ Screenshots:
 
 Website:
 
-Home Page:
-![image](https://user-images.githubusercontent.com/52329525/216803382-b9be8a56-c34b-4757-a142-f05d2abaf8ec.png)
-Admin Page:
-![image](https://user-images.githubusercontent.com/52329525/216803389-b4b584dd-3435-4d8a-abb3-9d676b00bb61.png)
-Voting Page:
-![image](https://user-images.githubusercontent.com/52329525/216803399-8276e17e-113d-45d8-a631-174c10f0dd09.png)
-Add Tweet Page:
-![image](https://user-images.githubusercontent.com/52329525/216803605-42e3983d-0191-44d2-876d-af7ef5514da1.png)
-Chat Page:
-![image](https://user-images.githubusercontent.com/52329525/216803407-d4042e35-774d-442f-966c-7558dd86a222.png)
-News Page:
-![image](https://user-images.githubusercontent.com/52329525/216803414-afab688d-481c-4076-b850-b882a1042800.png)
-NFTs Page:
-![image](https://user-images.githubusercontent.com/52329525/216803417-9e8d288b-7fc7-4a16-9deb-0a14a189e711.png)
+https://user-images.githubusercontent.com/52329525/217023792-f9ed46dd-0c67-4dae-a397-d59848fe0a33.mp4
+
 
 
