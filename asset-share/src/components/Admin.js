@@ -93,7 +93,7 @@ const Admin = () => {
   const getReportedIds = async () => {
     const contract = await connectWithTwitterContract();
     const reponse = await axios.get(
-      "http://44f1-125-99-120-242.ngrok.io/report_tweet/0/"
+      "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/report_tweet/0/"
     );
     console.log(reponse.data);
     const ids = reponse.data;

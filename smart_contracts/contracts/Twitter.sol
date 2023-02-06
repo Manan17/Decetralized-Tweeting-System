@@ -100,12 +100,9 @@ contract Twitter{
         emit addTweetToVote(_uid);
     }
 
-    function checkIfAlreadyReported (uint _uid) public  returns(bool){
-        if(isReported[msg.sender][_uid]==false){
-            isReported[msg.sender][_uid] = true;
-            return false;
-        }
-        return true;
+    function checkIfAlreadyReported (uint _uid) public {
+        require(isReported[msg.sender][_uid]==false,"Already Reported");
+        isReported[msg.sender][_uid] = true;
     }
 
     function getVotingTweets () public view returns(uint[] memory){

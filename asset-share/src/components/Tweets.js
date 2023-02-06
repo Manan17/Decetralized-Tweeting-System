@@ -62,22 +62,8 @@ const Card = ({ tweet, connectWithTwitterContract }) => {
       const response = await contract.checkIfAlreadyReported(
         parseInt(tweet.uid._hex)
       );
-      if (response) {
-        toast.error("Already Reported", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-
-        return;
-      }
       const res = await axios.post(
-        `http://44f1-125-99-120-242.ngrok.io/report_tweet/${parseInt(
+        `http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/report_tweet/${parseInt(
           tweet.uid._hex
         )}/`
       );
@@ -100,7 +86,7 @@ const Card = ({ tweet, connectWithTwitterContract }) => {
   const getLikes = () => {
     axios
       .get(
-        "http://44f1-125-99-120-242.ngrok.io/like_tweet/" +
+        "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/like_tweet/" +
           parseInt(tweet.uid._hex) +
           "/"
       )
@@ -112,7 +98,7 @@ const Card = ({ tweet, connectWithTwitterContract }) => {
   const likeATweet = () => {
     axios
       .post(
-        "http://44f1-125-99-120-242.ngrok.io/like_tweet/" +
+        "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/like_tweet/" +
           parseInt(tweet.uid._hex) +
           "/"
       )
@@ -216,7 +202,7 @@ const Card = ({ tweet, connectWithTwitterContract }) => {
 const Tweets = () => {
   const [desc, setDesc] = useState("");
   const config = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
   });
   const openai = new OpenAIApi(config);
   const {
@@ -269,7 +255,7 @@ const Tweets = () => {
   const tweetKaro = async () => {
     setLoading(true);
     const responseText = await axios.post(
-      "https://44f1-125-99-120-242.ngrok.io/detect_hate_text/",
+      "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/detect_hate_text/",
       {
         text: tweetText,
       }
@@ -292,9 +278,12 @@ const Tweets = () => {
         const url = `https://ipfs.io/ipfs/${cid}/${file.name}`;
         console.log(url);
         axios
-          .post("https://44f1-125-99-120-242.ngrok.io/detect_hate_image/", {
-            url: url,
-          })
+          .post(
+            "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/detect_hate_image/",
+            {
+              url: url,
+            }
+          )
           .then(async (res) => {
             if (!res.data.hate) {
               const contract = await connectWithTwitterContract();
@@ -324,7 +313,7 @@ const Tweets = () => {
         console.log(formdata);
         axios
           .post(
-            "https://44f1-125-99-120-242.ngrok.io/detect_hate_video/",
+            "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/detect_hate_video/",
             formdata
           )
           .then(async (res) => {
@@ -367,7 +356,7 @@ const Tweets = () => {
         console.log(formdata);
         axios
           .post(
-            "https://44f1-125-99-120-242.ngrok.io/detect_hate_audio/",
+            "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/detect_hate_audio/",
             formdata
           )
           .then(async (res) => {
@@ -401,7 +390,7 @@ const Tweets = () => {
               setLoading(false);
             }
           });
-      } else if(file) {
+      } else if (file) {
         toast.error("File type not supported", {
           position: "top-right",
           autoClose: 5000,
@@ -432,7 +421,7 @@ const Tweets = () => {
   };
   const tweetAI = async () => {
     const responseText = await axios.post(
-      "https://44f1-125-99-120-242.ngrok.io/detect_hate_text/",
+      "http://a675-2401-4900-5092-7361-7c61-b53c-d8d9-dcd6.ngrok.io/detect_hate_text/",
       {
         text: tweetText,
       }
@@ -488,7 +477,9 @@ const Tweets = () => {
             type="file"
             onChange={(e) => setFile(e.target.files[0])}
           />
-          <h1 className="text-xs text-gray-400 font-thin mt-1">Only upload text, image, video and audio</h1>
+          <h1 className="text-xs text-gray-400 font-thin mt-1">
+            Only upload text, image, video and audio
+          </h1>
           <h1 className="text-2xl my-2 font-bold">OR</h1>
           <h1 className="text-lg">Use AI to generate Image for your tweet</h1>
           <div className="flex my-2 gap-4">
