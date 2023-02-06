@@ -1,36 +1,48 @@
-# Block-Crate
+# Dwitter
 
-Blockchain based asset sharing system
-Our idea is to build a decentralized platform where user can send and receive digital assets on top of a blockchain network. It would be a peer to peer sharing network that will enable users to send files and data across the network securely and easily
+Social Media platforms in general have access to a lot of our personal information that is stored on centralized servers that are prone to security threats. Build a decentralized platform that allows users to share their opinions and feelings online while considering the above.
 
+It consists of Ethereum Blockchain, Django Backend Server and React as the frontend.
 
-The Flow:
+Hardhat is used for creating a local blockchain and deploying it to the local test network.
 
-![image](https://user-images.githubusercontent.com/52329525/201524435-f1a9c39a-0b1b-4103-9555-66ec64bd5f18.png)
+Our Solution:
+Decentralized
+<ul>Bi-layered Content Moderation Policy:</ul>
+<ul>AI and ML models used to detect hateful speech, sensitive images and inappropriate content</ul>
+<ul>Not only in text but images, audio files and videos that are attached to a post.</ul>
+<ul>Before the tweet is published, it goes through these checks.</ul>
+<ul>Decentralized! - Empowering the users!</ul>
+<ul>The people decide which tweets stay on the network.</ul>
+<ul>Voting Consensus:</ul>
+<ul>Users report the tweet and then it is put out for voting to all users.</ul>
+<ul>Once a 51% consensus is reached , the tweet gets automatically removed or stays based on the final verdict of voting.</ul>
 
-The Tech Stack:
+Screenshots:
 
-![image](https://user-images.githubusercontent.com/52329525/201524461-c65f7b2d-61f3-4b07-a760-85161ba960da.png)
+Website:
 
-**Instructions to run:**
+Home Page:
+![image](https://user-images.githubusercontent.com/52329525/216803382-b9be8a56-c34b-4757-a142-f05d2abaf8ec.png)
+Admin Page:
+![image](https://user-images.githubusercontent.com/52329525/216803389-b4b584dd-3435-4d8a-abb3-9d676b00bb61.png)
+Voting Page:
+![image](https://user-images.githubusercontent.com/52329525/216803399-8276e17e-113d-45d8-a631-174c10f0dd09.png)
+Add Tweet Page:
+![image](https://user-images.githubusercontent.com/52329525/216803605-42e3983d-0191-44d2-876d-af7ef5514da1.png)
+Chat Page:
+![image](https://user-images.githubusercontent.com/52329525/216803407-d4042e35-774d-442f-966c-7558dd86a222.png)
+News Page:
+![image](https://user-images.githubusercontent.com/52329525/216803414-afab688d-481c-4076-b850-b882a1042800.png)
+NFTs Page:
+![image](https://user-images.githubusercontent.com/52329525/216803417-9e8d288b-7fc7-4a16-9deb-0a14a189e711.png)
 
+Mobile App:
 
-Start the server: **node index.js**
-
-Start a local blockchain network using: **npx hardhat node**
-
-
-Deploy the contract using: **npx hardhat run scripts/deploy.js --network localhost**
-
-Install dependencies using: **npm install**
-
-
-Start the react project: **npm start**
-
-This code sample has 3 main folders.
-The asset-share folder is the Front End part which is created using react js. Tailwind CSS is used for styling and web3modal is used for the connection part of the smart contracts.
-The smart_contracts folder contain the 2 smart contracts of file sharing and chatting system using blockchain. It is written in solidity and hardhat is used for creating a local network.
-The server folder is the backend folder which is created using nodejs. It is used to implement the RSA encryption and decryption using an npm package. It creates a public key and a private key for each user.
-
-So the flow is:
-Once the user signs in using his/her wallet a private and a public key is generated and stored on blockchain which is mapped to each user's wallet address. Then when a send wants to send a file to a receiver, the file is stored on IPFS and the hash of the file is encrypted using users public key and stored on blockchain by mapping to receiver's wallet address. Then at the receiver's end it is decrypted using it's private key stored on the blockchain.
+![IMG-20230205-WA0001](https://user-images.githubusercontent.com/52329525/216803655-55a98f1e-48cc-4729-b3bf-f6853b225b60.jpg)
+![IMG-20230205-WA0002](https://user-images.githubusercontent.com/52329525/216803670-d71ae742-c08d-4c1f-86e1-aacaaceedca4.jpg)
+![IMG-20230205-WA0003](https://user-images.githubusercontent.com/52329525/216803663-4cab8b9d-f3cb-4203-a78c-5650baeeb98f.jpg)
+![IMG-20230205-WA0004](https://user-images.githubusercontent.com/52329525/216803674-23ad5be4-21ce-4d2c-aea5-625b6c676efc.jpg)
+![IMG-20230205-WA0005](https://user-images.githubusercontent.com/52329525/216803678-98c2e4aa-d0e3-4164-a0f5-1584b224f838.jpg)
+![IMG-20230205-WA0006](https://user-images.githubusercontent.com/52329525/216803680-71793b36-6f38-4cea-8efe-ee8a88f3c23b.jpg)
+![IMG-20230205-WA0007](https://user-images.githubusercontent.com/52329525/216803652-592aa108-00af-4070-9a13-da1f1ed3bd1f.jpg)
