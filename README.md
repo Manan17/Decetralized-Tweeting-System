@@ -25,4 +25,16 @@ Website:
 https://user-images.githubusercontent.com/52329525/217023792-f9ed46dd-0c67-4dae-a397-d59848fe0a33.mp4
 
 
+Instructions:
+In backend folder:
+**npm install**
+**node index.js**
 
+In smart contract folder:
+npm install
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+
+In asset-share folder:
+npm install
+npm start
